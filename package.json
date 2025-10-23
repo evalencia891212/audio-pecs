@@ -1,14 +1,14 @@
 {
   "name": "adio-pecs-app",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "engines": {
     "node": "22.17.1",
     "npm": "10.9.2"
   },
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "start": "node server.js",
+    "build": "ng build --configuration=production",
     "watch": "ng build --watch --configuration production",
     "test": "ng test",
     "serve:ssr:adio-pecs-app": "node dist/adio-pecs-app/server/server.mjs"
