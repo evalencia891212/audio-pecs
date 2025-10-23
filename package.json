@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "watch": "ng build --watch --configuration development",
+    "watch": "ng build --watch --configuration production",
     "test": "ng test",
     "serve:ssr:adio-pecs-app": "node dist/adio-pecs-app/server/server.mjs"
   },
@@ -29,7 +29,11 @@
     "@angular/platform-server": "^20.1.0",
     "@angular/router": "^20.1.0",
     "@angular/ssr": "^20.1.3",
+    "@primeuix/themes": "^1.2.5",
+    "bootstrap": "^5.3.8",
     "express": "^5.1.0",
+    "primeicons": "^7.0.0",
+    "primeng": "^20.2.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
   },

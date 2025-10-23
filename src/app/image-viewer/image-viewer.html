@@ -1,0 +1,134 @@
+
+
+<div class="card" style="max-width: '60rem'">
+    <p-tabs value="0">
+        <p-tablist>
+            <p-tab value="0">Basicos</p-tab>
+            <p-tab value="1">Categorias</p-tab>
+        </p-tablist>
+        <p-tabpanels>
+            <p-tabpanel value="0">
+                <p class="m-0">
+                  
+                </p>
+
+                
+                 <p-table #basics [value]="basicPecGrouped" [tableStyle]="{ 'max-width': '50rem' }">
+                        <!-- <ng-template #caption>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xl font-bold">Listas de Pecs</span>
+                            </div>
+                        </ng-template> -->
+                        <ng-template #header>
+                            <tr>
+                                <th>Imagen PEC</th>
+                            </tr>
+                        </ng-template>
+                        <ng-template #body let-image>
+                            <tr>
+                                
+                                <td style="text-align: center;" (click)="speakText(image[0].text)">
+                                    <img style="width: 100px;height: 100px;"
+                                        [src]="image[0].path"
+                                        [alt]="image[0].name"
+                                        class="w-24 rounded"
+                                    />
+                                    <div>
+                                        {{ image[0].name }}
+                                    </div>
+                                </td>
+                                
+                                <td style="text-align: center;" (click)="speakText(image[1].text)">
+                                    <img style="width: 100px;height: 100px;"
+                                        [src]="image[1].path"
+                                        [alt]="image[1].name"
+                                        class="w-24 rounded"
+                                    />
+                                    <div>
+                                        {{ image[1].name }}
+                                    </div>
+                                </td>
+                            </tr>
+                        </ng-template>
+                        <ng-template #footer>
+                        
+                        </ng-template>
+                    </p-table>
+            </p-tabpanel>
+            <p-tabpanel value="1">
+                <p class="m-0">                    
+                  
+
+                </p>
+
+                 @if (showPecs == true) {
+                    <p-table #images [value]="files" [tableStyle]="{ 'min-width': '60rem' }">
+                        <!-- <ng-template #caption>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xl font-bold">Listas de Pecs</span>
+                            </div>
+                        </ng-template> -->
+                        <ng-template #header>
+                            <tr>
+                                <th>Lista</th>
+                                <th>Imagen</th>
+                            </tr>
+                        </ng-template>
+                        <ng-template #body let-image>
+                            <tr>
+                                <td style="width: 100px;">{{ image.name }}</td>
+                                <td (click)="speakText(image.text)">
+                                    <img style="width: 100px;height: 100px;"
+                                        [src]="image.path"
+                                        [alt]="image.name"
+                                        class="w-24 rounded"
+                                    />
+                                </td>
+                            </tr>
+                        </ng-template>
+                        <ng-template #footer>
+                        
+                        </ng-template>
+                    </p-table>
+                    } @else {
+                    <p-table #menu [value]="items" [tableStyle]="{ 'min-width': '60rem' }">
+                        <!-- <ng-template #caption>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xl font-bold">Listas de Pecs</span>
+                            </div>
+                        </ng-template> -->
+                        <ng-template #header>
+                            <tr>
+                                <th>Lista</th>
+                                <th>Imagen</th>
+                            </tr>
+                        </ng-template>
+                        <ng-template #body let-item>
+                            <tr>
+                                <td style="width: 100px;">{{ item.label }}</td>
+                                <td (click)="selectGroup(item.key)">
+                                    <img style="width: 100px;height: 100px;"
+                                        [src]="item.icon"
+                                        [alt]="item.label"
+                                        class="w-24 rounded"
+                                    />
+                                </td>
+                            </tr>
+                        </ng-template>
+                        <ng-template #footer>
+                        
+                        </ng-template>
+                    </p-table>
+                    } 
+            </p-tabpanel>
+            
+        </p-tabpanels>
+    </p-tabs>
+</div>
+
+
+ 
+
+
+
+

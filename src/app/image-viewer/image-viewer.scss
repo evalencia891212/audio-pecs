@@ -1,0 +1,153 @@
+.menu-acctions-icon {
+    /* Ruta relativa a la raíz del proyecto, no al CSS */
+    background-image: url('/../public/Menu/Acciones.png');
+    background-size: contain; /* Ajusta la imagen */
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 24px; /* Define el tamaño de tu icono */
+    height: 24px;
+    margin-right: 5px; /* Espaciado con el texto del nodo */
+}
+
+.ui-tree .ui-treenode-content .pi {
+    /* Asegúrate de que no haya un icono de PrimeNG visible */
+    display: none; 
+}
+
+ .slot-row {
+    height: 60px;
+  }
+
+  .celda-con-linea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Centra horizontalmente el contenido */
+}
+
+.celda-con-linea .contenido-superior {
+  width: 100%; /* Asegura que la línea se extienda por todo el ancho */
+  text-align: center;
+}
+
+.contenido-inferior {
+  padding-top: 5px; /* Espacio entre el texto inferior y la línea */
+}
+
+
+
+.checkbox-fila {
+  display: flex;
+  align-items: center; /* Centra verticalmente el checkbox y el texto */
+  gap: 10px;           /* Añade un pequeño espacio entre el checkbox y la etiqueta */
+}
+
+ @media (min-width: 768px) {
+    .centered-tabs-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh; /* O la altura que desees para el centrado vertical */
+    width: 100vw; /* O el ancho que desees para el centrado horizontal */
+  }
+
+  :root {
+    --body-bg: var(--p-surface-50);
+    --body-text-color: var(--p-surface-900);
+    --card-border: 1px solid var(--border-color);
+    --card-bg: var(--p-surface-0);
+    --border-color: var(--p-surface-200);
+    --text-color: var(--p-surface-700);
+    --overlay-background: #ffffff;
+  }
+  
+  :root[class='p-dark'] {
+    --body-bg: var(--p-surface-950);
+    --body-text-color: var(--p-surface-50);
+    --card-border: 1px solid transparent;
+    --card-bg: var(--p-surface-900);
+    --border-color: rgba(255, 255, 255, 0.1);
+    --text-color: var(--p-surface-0);
+    --overlay-background: var(--p-surface-900);
+  }
+  
+  html {
+    font-size: 14px;
+  }
+  
+  body {
+    margin: 0px;
+    min-height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: var(--body-bg);
+    font-weight: normal;
+    color: var(--body-text-color);
+    padding: 1rem;
+  }
+  
+  .card {
+    background: var(--card-bg);
+    border: var(--card-border);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+  }
+
+  }
+
+  @media (max-width: 767px) {
+    .centered-tabs-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size:smaller ;
+      height: 50vh; /* O la altura que desees para el centrado vertical */
+      width: 92vw; /* O el ancho que desees para el centrado horizontal */
+    }
+
+ 
+  
+  :root {
+    --body-bg: var(--p-surface-50);
+    --body-text-color: var(--p-surface-900);
+    --card-border: 1px solid var(--border-color);
+    --card-bg: var(--p-surface-0);
+    --border-color: var(--p-surface-200);
+    --text-color: var(--p-surface-700);
+    --overlay-background: #ffffff;
+  }
+  
+  :root[class='p-dark'] {
+    --body-bg: var(--p-surface-950);
+    --body-text-color: var(--p-surface-50);
+    --card-border: 1px solid transparent;
+    --card-bg: var(--p-surface-900);
+    --border-color: rgba(255, 255, 255, 0.1);
+    --text-color: var(--p-surface-0);
+    --overlay-background: var(--p-surface-900);
+  }
+  
+  html {
+    font-size: 14px;
+  }
+  
+  body {
+    margin: 0px;
+    min-height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: var(--body-bg);
+    font-weight: normal;
+    color: var(--body-text-color);
+    padding: 1rem;
+  }
+  
+  .card {
+    background: var(--card-bg);
+    border: var(--card-border);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+  }
+  }
