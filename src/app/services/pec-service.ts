@@ -32,11 +32,6 @@ export class PecService {
               "path":"Pecs/Alimentos/Comida/agua.jpg",
               "text":"agua"
           },
-          {
-              "name":"comer",
-              "path":"Pecs/Acciones/comer.png",
-              "text":"comer"
-          },
            {
               "name":"baño",
               "path":"Pecs/Lugares/baño.jpg",
@@ -46,7 +41,32 @@ export class PecService {
               "name":"Teleton",
               "path":"Pecs/Lugares/Teleton.jpg",
               "text":"Teleton"
-          }
+          },
+          {
+              "name":"jugo",
+               "path":"Pecs/Alimentos/Golosinas/jugo.jpg",
+               "text":"jugo"
+           },
+            {
+                "name":"maruchan",
+                "path":"Pecs/Alimentos/Golosinas/maruchan.jpg",
+                "text":"maruchan"
+            },
+             {
+                "name":"mama",
+                "path":"Pecs/Familia/mama.jpg",
+                "text":"mamá"
+            },
+             {
+                "name":"papa",
+                "path":"Pecs/Familia/papa.jpg",
+                "text":"papá"
+            },
+              {
+                "name":"mateo",
+                "path":"Pecs/Familia/Mateo.jpg",
+                "text":"mateo"
+            }
 
     ]
 
@@ -54,7 +74,7 @@ export class PecService {
     {
         "key":"0",
         "label":"Acciones",
-        "icon":"Menu/Acciones.png",
+        "icon":"Menu/Acciones.jpg",
         "childrens":[
           
         ],
@@ -79,7 +99,7 @@ export class PecService {
     {
         "key":"1",
         "label":"Actividades",
-        "icon":"Menu/Actividades.png",
+        "icon":"Menu/Actividades.jpg",
         "childrens":[
           
         ],
@@ -111,12 +131,12 @@ export class PecService {
               "files":[
                 {
                     "name":"agua",
-                    "path":"Pecs/Comida/Comida/agua.jpg",
+                    "path":"Pecs/Alimentos/Comida/agua.jpg",
                     "text":"Agua"
                 },
                 {
                     "name":"gelatina",
-                    "path":"Pecs/Comida/Comida/gelatina.jpg",
+                    "path":"Pecs/Alimentos/Comida/gelatina.jpg",
                     "text":"Gelatina"
                 }
               ]
@@ -124,20 +144,25 @@ export class PecService {
           {
               "key":"2-2",
               "label":"Golosinas",
-              "icon":"Menu/Comida.jpg",
+              "icon":"Menu/golosinas.jpg",
               "childrens":[
                 
               ],
               "files":[
                 {
-                    "name":"agua",
-                    "path":"Pecs/Comida/Comida/agua.jpg",
-                    "text":"Agua"
+                    "name":"boli",
+                    "path":"Pecs/Alimentos/Golosinas/boli.jpg",
+                    "text":"Boli"
                 },
                 {
-                    "name":"gelatina",
-                    "path":"Pecs/Comida/Comida/gelatina.jpg",
-                    "text":"Gelatina"
+                    "name":"jugo",
+                    "path":"Pecs/Alimentos/Golosinas/jugo.jpg",
+                    "text":"jugo"
+                },
+                {
+                    "name":"maruchan",
+                    "path":"Pecs/Alimentos/Golosinas/maruchan.jpg",
+                    "text":"maruchan"
                 }
               ]
           }

@@ -18,16 +18,21 @@ import { TabsModule } from 'primeng/tabs';
 })
 export class ImageViewer implements OnInit{
  
-   items: any[] = [];
+   items:any[] = [];
    files:any[] = [];
+   keyLevels:any[] = [];
+
+   selectedMenuKey:string ="";
 
    public showPecs:boolean = false
 
   @ViewChild('cm') cm!: ContextMenu;
 
   selectedId!: string;  
+  basicPecGrouped: any = [];
+  menuLevel:number = 0
 
-   basicPecGrouped: any = [];
+
 
   constructor(public pec_service:PecService){
 
@@ -54,7 +59,7 @@ export class ImageViewer implements OnInit{
   }
 
   groupBasicPecs() {
-    debugger
+    
     var groupSize = 2
    
 
@@ -66,9 +71,9 @@ export class ImageViewer implements OnInit{
   }
 
   selectGroup(key:string) {
-    debugger
+    
     console.log("event")
-
+    this.selectedMenuKey = key;
     //GetChilds
     let menu = this.getImageMenu(key)
     if(menu.childrens.length > 0){
@@ -100,8 +105,43 @@ export class ImageViewer implements OnInit{
     getImageMenu(key:string){
       debugger
       let menuItem:any;
-      menuItem = this.pec_service.menuTree.find(item => item.key == key);
+      this.keyLevels = key.split('-');
+
+      if(this.keyLevels.length == 1){
+        menuItem = this.pec_service.menuTree.find(item => item.key == key);
+      }else{
+        var parentItems:any = this.pec_service.menuTree.find(item => item.key == this.keyLevels[0])?.childrens;
+        menuItem = parentItems.find((item: { key: string; }) => item.key == key)
+      }
+
       return menuItem
+    }
+
+    public isSublevel(){
+      
+      return (this.keyLevels.length >= 1)
+    }
+
+    getParentMenu(){
+      debugger
+      this.selectedMenuKey;
+      if(this.selectedMenuKey.split("-").length == 1){
+        this.items = []
+        this.showPecs = false
+        
+        this.keyLevels = []
+        this.pec_service.menuTree.forEach(item => {
+        this.items.push(
+            {
+             key:item.key,
+             label:item.label,
+             icon: item.icon
+            }
+        )
+    })
+      }else{
+        this.selectGroup(this.selectedMenuKey.split("-")[0])
+      }
     }
 
      speakText(text:string) {
